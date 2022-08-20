@@ -36,10 +36,16 @@ body {
     width: 100%;
     font-size: 100%;
     line-height: 1;
-    font-size: 14px;
+    font-size: 10px;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: $font-family1;
+    background-color: $background-color1;
+    color: $main-font-color;
 }
 
 input,
