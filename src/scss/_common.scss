@@ -1,6 +1,6 @@
 .container {
     box-sizing: border-box;
-    padding: 15px;
+    padding: 0 15px;
     margin: 0 auto;
 
     &--big {
@@ -9,5 +9,36 @@
 
     &--small {
         max-width: 1420px;
+    }
+}
+
+.button {
+    min-width: 100px;
+    color: $main-font-color;
+    background-color: $button-color2;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: color, background-color 0.3s ease;
+
+        &:hover {
+            background-color: #1c811c;
+            box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.8);
+        }
+
+    &--border{
+        border: 1px solid #ffffff;
+        background-color: $button-color1;
+
+    &:hover {
+            color: #000000;
+            background-color: #ffffff;
+            box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.8);
+        }
+    }
+
+    @media (max-width: 992px) {
+    padding: 10px 20px;
+    min-width: 70px;
     }
 }
