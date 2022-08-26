@@ -1,6 +1,6 @@
 .main-block {
     background: url('../img/header/ellipse.svg') no-repeat -50px -150px, url('../img/header/ellipse.svg') no-repeat -20px -190px;
-
+    
     &__wrapper {
         padding: 250px 0;
 
@@ -82,8 +82,11 @@
 }
 
 .icons-main-block {
-    // pointer-events: none;
     z-index: -1;
+
+    @media (max-width: 768px) {
+        opacity: 0.5;
+    }
 
     &__item {
         position: absolute;
