@@ -4,9 +4,8 @@ $burger-menu-color: #ffffff;
     display: none;
 
     @media (max-width: 768px) {
-
-        z-index: 5;
             display: block;
+            z-index: 5;
             position: relative;
             width: 40px;
             height: 18px;

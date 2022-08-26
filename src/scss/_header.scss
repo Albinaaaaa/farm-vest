@@ -8,6 +8,8 @@
     line-height: 2.16rem;
     font-weight: 400;
     font-family: $font-family2;
+    // background-color: $background-color1;
+    z-index: 4;
 
     @media (max-width: 768px) {
         padding: 15px 0;
@@ -15,9 +17,13 @@
     }
 
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: 300px 1fr 300px;
         align-items: center;
-        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr 0 1fr;
+        }
     }
 
     &__logo{
@@ -29,7 +35,8 @@
     }
 
     &__img{
-        width: 100%;
+        max-width: 150px;
+        max-height: 40px;
 
         & path {
         transition: fill 0.3s ease;
@@ -50,7 +57,7 @@
             background-color: $background-color1;
             top: 0;
             left: 0;
-            height: 51px;
+            height: 68px;
             z-index: 4;
             box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.75);
             width: 100%;
@@ -62,18 +69,24 @@
         position: relative;
         z-index: 5;
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
         gap: 15px;
     }
 
-    // &__button:not(:last-child){
-    //     margin-right: 15px;
-    // }
+    &__button {
+        // @media (max-width: 375px) {
+        //     padding: 10px;
+        // }
+    }
 
     &__burger {
         display: none;
         background: transparent;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
     }
 }
 
