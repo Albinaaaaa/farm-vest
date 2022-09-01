@@ -1,3 +1,5 @@
+const items = document.querySelectorAll(".icons-main-block__item");
+
 function parallax(event) {
   this.querySelectorAll(".icons-main-block__item").forEach((element) => {
     let speed = element.getAttribute("data-speed");

@@ -1,0 +1,87 @@
+$photo-background: rgba(255, 255, 255, 0.05);
+
+.instructions {
+    padding: 100px 0;
+
+    @media (max-width: 768px) {
+        padding: 50px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+
+        @media (max-width: 1440px) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        flex: 0 1 45%;
+
+        & > *:not(:last-child) {
+            margin-bottom: 35px;
+
+            @media (max-width: 425px) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+
+    &__title{
+        font-size: 6.4rem;
+        line-height: 7.2rem;
+
+        @media (max-width: 768px) {
+            font-size: 6rem;
+            line-height: 7rem;
+        }
+
+        @media (max-width: 425px) {
+            font-size: 5rem;
+            line-height: 6rem;
+        }
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 3.186rem;
+    }
+
+    &__navigation{
+        width: 100%;
+
+        @media (max-width: 1440px) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &__photo {
+        position: relative;
+        flex: 0 1 52%;
+        background: url("../img/instructions/ellipse.svg") right top no-repeat, $photo-background;
+        border-radius: 25px;
+        min-height: 600px;
+
+        @media (max-width: 1440px) {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 992px) {
+            display: none;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        border-radius: 25px;
+        max-width: 90%;
+        max-height: 80%;
+        top: 15%;
+        left: 8%;
+    }
+}

@@ -1,0 +1,19 @@
+.partners {
+    padding: 100px 0;
+
+    &__wrapper {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        max-width: 200px;
+
+        svg {
+            width: 100%;
+        }
+    }
+}
