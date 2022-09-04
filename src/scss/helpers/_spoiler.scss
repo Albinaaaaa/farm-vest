@@ -1,0 +1,96 @@
+$spoiler-background: rgba(255, 255, 255, 0.05);
+
+.spoiler {
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+    &:hover .spoiler__title{
+        box-shadow: 0 0 15px $spoiler-background;
+    }
+    }
+
+    &__title {
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        background: linear-gradient(to right, $spoiler-background, $spoiler-background), linear-gradient(to right, $background-color1, $background-color1);
+        border-radius: 20px;
+        padding: 20px 30px;
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 3.24rem;
+        color: $main-font-color;
+        text-align: left;
+        z-index: 2;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%) scaleY(-1);
+            width: 25px;
+            height: 25px;
+            background: url('../img/about/icons/arrow.svg');
+            transition: transform 1s ease;
+        }
+
+        &.clicked::after {
+            transform: translateY(-50%) scaleY(1);
+        }
+    }
+
+    &__text {
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+        pointer-events: none;
+        padding: 15px 30px;
+        font-size: 1.8rem;
+        line-height: 3.18rem;
+        opacity: 0;
+        max-width: 611px;
+        top: 0;
+
+        &.show {
+            animation: spoilerShow 1s 1 ease forwards;
+        }
+
+        &.hide {
+        animation: spoilerHide 1s ease forwards;
+        }
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+    }
+}
+
+@keyframes spoilerShow {
+    from {
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        position: static;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spoilerHide {
+    from {
+        opacity: 1;
+        position: static;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        position: absolute;
+        transform: translateY(-50%);
+        }
+}
