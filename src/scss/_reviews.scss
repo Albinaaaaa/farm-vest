@@ -1,0 +1,115 @@
+$item-background: rgba(255, 255, 255, 0.05);
+
+.reviews {
+
+    &__Wrapper {}
+
+    &__title {
+        font-weight: 700;
+        font-size: 7rem;
+        line-height: 7.8rem;
+        text-align: center;
+        margin-bottom: 32px;
+
+        @media (max-width: 1024px) {
+            font-size: 6rem;
+            line-height: 6.8rem;
+        }
+
+        @media (max-width: 576px) {
+            font-size: 5rem;
+            line-height: 5.8rem;
+        }
+    }
+
+    &__text {
+        max-width: 563px;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 3.18rem;
+        text-align: center;
+        margin-bottom: 42px;
+    }    
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-bottom: 42px;
+        justify-content: space-evenly;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 576px) {
+            gap: 25px;
+        }
+    }
+
+    &__item {
+        flex: 0 1 45%;
+        border-radius: 20px;
+        background-color: $item-background;
+        display: flex;
+
+        &.hide {
+            display: none;
+        }
+    }
+
+    &__photo {
+        flex: 0 1 40%;
+        min-height: 377px;
+        min-width: 302px;
+
+        img {
+            border-radius: 20px 0 0 20px;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media (max-width: 1200px) {
+            min-height: 300px;
+            min-width: 230px;
+        }
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__content {
+        padding: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        font-size: 1.8rem;
+        line-height: 3.18rem;
+        gap: 20px;
+    }
+
+    &__description {
+        flex: 1 1 60%;
+        font-weight: 400;
+    }
+
+    &__customer {
+        font-weight: 600;
+    }
+
+    &__button {
+        font-weight: 500;
+        font-size: 1.8rem;
+        line-height: 2rem;
+        max-width: 221px;
+        text-align: center;
+        margin: 0 auto;
+
+        &.hide {
+            display: none;
+        }
+    }
+}
